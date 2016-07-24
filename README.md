@@ -9,7 +9,7 @@ The following commands will mount the current directory on the host in
 the `GOPATH` in the container.  The working directory will be set to
 that directory.
 
-Replace `APP` with the name of your application, such as:
+Replace `APP` in `/go/src/APP` with the name of your application, such as:
 
     /go/src/my-app
 
@@ -17,12 +17,15 @@ or
 
     /go/src/github.com/username/my-app
 
+
 ### Get a shell
 
     docker run -it -v "$PWD":/go/src/APP  -w /go/src/APP kmcgrath/godev bash
 
-Within a a shell there is access to `go`, `godep`, `vim` and other go
-binaries.
+Within a shell there is access to `go`, `godep`, `vim` and other go
+binaries. This is a good place to do `go get` and `godep save`. The
+`vendors` directory will be written to the mounted directory from the
+host.
 
 ### Straight to vim
 
