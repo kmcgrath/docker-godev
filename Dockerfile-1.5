@@ -1,5 +1,7 @@
 FROM golang:1.5
 
+ENV GO15VENDOREXPERIMENT=1
+
 # godep and go-vim binaries
 RUN go get \
     github.com/tools/godep \
@@ -14,7 +16,6 @@ RUN go get \
     github.com/jstemmer/gotags \
     github.com/klauspost/asmfmt/cmd/asmfmt \
     github.com/fatih/motion \
-    github.com/zmb3/gogetdoc \
     github.com/josharian/impl
 
 # vim and janus
@@ -23,4 +24,3 @@ RUN apt-get update && apt-get install -y \
   rake \
   && curl -L https://bit.ly/janus-bootstrap | bash
 
-ENV GO15VENDOREXPERIMENT=1
