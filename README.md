@@ -4,6 +4,7 @@ Go development with Vim+[Janus][janus-url], [vim-go][vim-go-url]
 binaries and [godep][godep-url]
 
 Docker Hub: [kmcgrath/godev][godev-hub-url]
+
 Github: [kmcgrath/docker-godev][godev-github-url]
 
 ## Use
