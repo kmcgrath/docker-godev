@@ -21,4 +21,8 @@ RUN go get \
 RUN apt-get update && apt-get install -y \
   vim \
   rake \
+  ack-grep \
+  ctags \
+  git \
+  jq \
   && curl -L https://bit.ly/janus-bootstrap | bash
